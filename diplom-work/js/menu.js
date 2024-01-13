@@ -84,7 +84,7 @@ prev.addEventListener('click',()=>{
 
 //asdasdasdasdadffgdg
 
-const tabs = document.querySelectorAll('.tabheader__item');
+const tabs = document.querySelectorAll('.tabd');
 const tabContent = document.querySelectorAll('.tab');
 const tabParent = document.querySelector('.hero-menu_header');
 
@@ -93,13 +93,13 @@ function hideTabContent(){
         item.style.display = "none";
     })
     tabs.forEach(item=>{
-        item.classList.remove('tabheader__item_active');
+        item.classList.remove('current');
     })
 }
 
 function showTabContent(i=0){
     tabContent[i].style.display = 'block';
-    tabs[i].classList.add('tabheader__item_active');
+    tabs[i].classList.add('current');
 }
 
 
@@ -107,7 +107,7 @@ hideTabContent();
 showTabContent();
 
 tabParent.addEventListener('click',(event)=>{
-    if(event.target = event.target.classList.contains('tabheader__item')){
+    if(event.target && event.target.classList.contains('hero-menu_header')){
         tabs.forEach((item,i)=>{
             if(event.target == item){
                 hideTabContent();
