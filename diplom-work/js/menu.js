@@ -85,7 +85,7 @@ prev.addEventListener('click',()=>{
 //asdasdasdasdadffgdg
 
 const tabs = document.querySelectorAll('.tabheader__item');
-const tabContent = document.querySelectorAll('.tabcontent');
+const tabContent = document.querySelectorAll('.tab');
 const tabParent = document.querySelector('.hero-menu_header');
 
 function hideTabContent(){
